@@ -48,7 +48,7 @@ for appid, hour in t:
     gameUrl = "http://store.steampowered.com/app/" + str(appid)
     gamePage = requests.get(gameUrl, cookies=cookies).content
     soup = BeautifulSoup(gamePage, 'html.parser')
-    gameName = soup.find("div", class_="apphub_AppName").get_text().decode('utf-8')
+    gameName = soup.find("div", class_="apphub_AppName").get_text().encode('ascii', 'ignore')
     t.set_description('Analyzing game %s' % gameName)
     tags = soup.find_all("a", class_="app_tag")
     count = 1
