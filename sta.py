@@ -8,6 +8,8 @@ from bs4 import BeautifulSoup
 from plotly.graph_objs import *
 from plotly.offline import init_notebook_mode, plot
 
+from colorama import init
+init()
 
 def isNumber(s):
     try:
