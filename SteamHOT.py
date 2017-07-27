@@ -66,7 +66,7 @@ for eachJson in t1:
             achievSummary = achievSoup.find("div", id="topSummaryAchievements")
             if achievSummary is not None:
                 summaryText = achievSummary.get_text().strip()
-                if summaryText.startswith('0') and not appID in whiteList:
+                if summaryText.startswith('0') and not summaryText.startswith('0 of 0') and not appID in whiteList:
                     print("\nThis game will be ignored because there is no achievement unlocked: " + gameName)
                     continue
     if 'hours_forever' in eachJson and float(eachJson['hours_forever'].replace(",", "")) > maxThreshold:
