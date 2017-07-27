@@ -73,7 +73,7 @@ for eachJson in t1:
         print("\nThis game will be ignored because its number of hours exceed maximum threshold: " + gameName)
         continue
     if 'hours_forever' in eachJson and float(eachJson['hours_forever'].replace(",", "")) < minThreshold:
-        print(gameName + " and other games with low hours will be ignored.")
+        print("\n" + gameName + " and other games with low hours will be ignored.")
         break
     gameHourList[appID] = float(eachJson['hours_forever'].replace(",", "")) if 'hours_forever' in eachJson else 0.0
     nameDict[appID] = gameName 
