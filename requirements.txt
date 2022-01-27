@@ -1,0 +1,4 @@
+beautifulsoup4>=4.10.0
+plotly>=5.5.0
+requests>=2.26.0
+tqdm>=4.62.3
